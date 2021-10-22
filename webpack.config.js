@@ -13,7 +13,7 @@ module.exports = {
   },
   mode: NODE_ENV ? NODE_ENV : 'development',
   // начальные файлы
-  entry: path.resolve(__dirname, 'src/Parallax.js'),
+  entry: path.resolve(__dirname, 'src/index.js'),
   // выходные файлы и чанки
   output: {
     path: path.resolve(__dirname, 'dist'),
