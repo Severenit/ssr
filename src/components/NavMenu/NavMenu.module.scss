@@ -1,0 +1,35 @@
+.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  color: #212121;
+  margin: 0 25px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    height: 1px;
+    width: 1%;
+    background: #212121;
+    border: 1px solid #212121;
+    border-radius: 6px;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
+  }
+
+  &:hover,
+  &.active {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}

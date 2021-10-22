@@ -1,0 +1,16 @@
+@import "varibales";
+@import 'breakpoints';
+
+.root {
+  min-height: calc(100vh - $menuHeightDesktop);
+  padding: 64px 0;
+  position: relative;
+
+  @include media('<=tablet') {
+    padding: 32px 0;
+  }
+}
+
+.home {
+  background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+}
