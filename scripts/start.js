@@ -5,10 +5,6 @@ const port = process.env.PORT || 3000;
 
 const FILES = /\.(js|js.map|woff|woff2|svg|bmp|jpg|jpeg|gif|png|ico|css)(\?v=\d+\.\d+\.\d+)?$/;
 
-const PATH = {
-  '/': 'index.html'
-}
-
 const init = async () => {
   const server = Hapi.server({
     port,
@@ -24,7 +20,7 @@ const init = async () => {
         return h.file(path.join(process.cwd(), 'dist', request.path));
       }
 
-      return h.file(path.join(process.cwd(), 'dist', PATH[request.path]));
+      return h.file(path.join(process.cwd(), 'dist', 'index.html'));
     }
   })
 
