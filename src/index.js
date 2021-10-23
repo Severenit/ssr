@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 
 window.addEventListener('load', () => {
-  ReactDOM.render((
+  ReactDOM.hydrate((
     <BrowserRouter>
       <App />
     </BrowserRouter>
